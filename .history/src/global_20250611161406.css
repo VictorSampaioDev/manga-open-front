@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap");
+@import "normalize.css";
+@import "tailwindcss";
+
+:root {
+  --text-color: #ffffff;
+  --card-color: #f9f9f9;
+  --primary-color: #e64a19;
+  --secondary-color: #6f747a42;
+  --tertiary-color: #000000;
+  --background-color: #18012e;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--tertiary-color);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(-10px);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  75% {
+    transform: translate(10px)
+  }
+  100% {
+    transform: translate(0px);
+  }
+
+}
+  .animate-float{
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+/* Define a animação (como o gradiente vai se mover) */
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%; /* Posição inicial */
+    }
+    50% {
+        background-position: 100% 50%; /* Posição no meio da animação */
+    }
+    100% {
+        background-position: 0% 50%; /* Volta para a posição inicial, criando um loop suave */
+    }
+}
+

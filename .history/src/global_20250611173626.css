@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap");
+@import "normalize.css";
+@import "tailwindcss";
+
+:root {
+  --text-color: #ffffff;
+  --card-color: #f9f9f9;
+  --primary-color: #e64a19;
+  --secondary-color: #6f747a42;
+  --tertiary-color: #000000;
+  --background-color: #18012e;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--tertiary-color);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(-10px);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  75% {
+    transform: translate(10px)
+  }
+  100% {
+    transform: translate(0px);
+  }
+
+}
+  .animate-float{
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animated-gradient {
+    background: linear-gradient(-45deg, #3b1a6c, #000000, #2f046f, #000000);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.glassmorphism-border {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1); /* Sombra interna para o brilho superior */
+    
+    /* Para navegadores mais antigos que não suportam backdrop-filter,
+       o fundo semi-transparente do bg-black bg-opacity-70 será o fallback. */
+}
+
+/* Você pode adicionar um efeito hover para a borda brilhar mais (opcional) */
+.glassmorphism-border:hover {
+    border: 1px solid rgba(255, 255, 255, 0.4); /* Borda mais visível no hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
