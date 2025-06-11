@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&amp;display=swap");
+@import "normalize.css";
+@import "tailwindcss";
+
+:root {
+  --text-color: #ffffff;
+  --card-color: #f9f9f9;
+  --primary-color: #e64a19;
+  --secondary-color: #f48fb1;
+  --tertiary-color: #000000;
+  --background-color: #18012e;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--tertiary-color);
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+  25% {
+    transform: translate(-5px);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  75% {
+    transform: translate(5px)
+  }
+  100% {
+    transform: translate(10px);
+  }
+
+}
+  .animate-float{
+    animation: float 3s ease-in-out infinite;
+  }
