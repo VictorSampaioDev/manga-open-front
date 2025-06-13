@@ -3,18 +3,20 @@ import React from 'react'; // Adicionado React import, caso não esteja implicit
 const CreateUser = () => {
   return (
     <>
+      {/* Container principal para o gradiente e centralização */}
       <div className="animated-gradient h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black opacity-80 max-w-lg md:max-w-xl w-full mx-auto p-8 md:p-12 lg:p-16">
+        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black bg-opacity-70 max-w-lg md:max-w-xl w-full mx-auto p-8 md:p-12 lg:p-16">
+
           <h1 className="text-white font-bold mb-8 text-2xl md:text-3xl lg:text-4xl">
             Crie sua conta
           </h1>
 
-          <form className="w-full">
-            <label className="block mb-4">
+          <form className="w-full"> {/* Formulário ocupa 100% da largura do pai */}
+            <label className="block mb-4"> {/* label como bloco para organização */}
               <h3 className="text-white mb-2 text-lg">Nome</h3>
               <input
                 className="text-white border border-gray-400 bg-[var(--secondary-color)] rounded-md w-full h-10 p-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
-                name="nome"
+                name="nome" // Nome do campo 'nome'
                 type="text"
               />
             </label>
@@ -24,7 +26,7 @@ const CreateUser = () => {
               <input
                 className="text-white border border-gray-400 bg-[var(--secondary-color)] rounded-md w-full h-10 p-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
                 name="email"
-                type="email"
+                type="email" // Alterado para type="email" para validação de e-mail
               />
             </label>
 
@@ -37,18 +39,18 @@ const CreateUser = () => {
               />
             </label>
 
-            <label className="block mb-8">
+            <label className="block mb-8"> {/* mb maior para separar do botão */}
               <h3 className="text-white mb-2 text-lg">Confirmar Senha</h3>
               <input
                 className="text-white border border-gray-400 bg-[var(--secondary-color)] rounded-md w-full h-10 p-2 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
-                name="confirm_password"
+                name="confirm_password" // Nome do campo 'confirm_password' para ser diferente da senha
                 type="password"
               />
             </label>
 
             <div className="flex justify-center mt-8 md:mt-12">
               <button
-                type="submit" 
+                type="submit" // Usar type="submit" para botões de formulário
                 className="text-white font-bold bg-[var(--secondary-color)] rounded-full p-3 md:p-4 w-full sm:w-2/3 md:w-full max-w-xs cursor-pointer hover:bg-white hover:text-black duration-200 text-lg"
               >
                 Criar conta

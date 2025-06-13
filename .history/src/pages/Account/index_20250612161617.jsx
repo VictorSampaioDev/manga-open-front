@@ -3,12 +3,23 @@ import { NavLink } from "react-router-dom";
 const LoginRegister = () => {
   return (
     <>
+      {/* Container principal para o gradiente e centralização */}
       <div className="animated-gradient h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black opacity-80 max-w-lg w-full mx-auto p-8 md:p-12 lg:p-16">
+        {/*
+          Caixa principal (glassmorphism-border)
+          - max-w-lg: Largura máxima para telas grandes
+          - w-full: Ocupa toda a largura disponível até o max-w
+          - mx-auto: Centraliza horizontalmente
+          - p-8 md:p-12: Padding responsivo
+          - mt-4 md:mt-8 mb-4 md:mb-8: Margens verticais responsivas para centralizar melhor
+        */}
+        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black bg-opacity-70 max-w-lg w-full mx-auto p-8 md:p-12 lg:p-16">
+
           <h1 className="text-white font-bold mb-8 text-2xl md:text-3xl lg:text-4xl">
             Entre na sua conta
           </h1>
-          <form className="w-full">
+
+          <form className="w-full"> {/* Formulário ocupa 100% da largura do pai */}
             <label className="block mb-4">
               <h3 className="text-white mb-2 text-lg">Login</h3>
               <input

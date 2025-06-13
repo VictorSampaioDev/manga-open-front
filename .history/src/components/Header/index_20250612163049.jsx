@@ -60,45 +60,4 @@ const Header = () => {
             className="
               text-lg lg:text-xl [&.active]:font-bold [&.active]:text-[var(--primary-color)]
               hover:drop-shadow-[0_0_20px_var(--primary-color)]
-              text-[var(--text-color)] transition duration-150
-            "
-          >
-            Mangás
-          </NavLink>
-          <NavLink
-            to="/contacts"
-            className="
-              text-lg lg:text-xl [&.active]:font-bold [&.active]:text-[var(--primary-color)]
-              hover:drop-shadow-[0_0_20px_var(--primary-color)]
-              text-[var(--text-color)] transition duration-150
-            "
-          >
-            Contatos
-          </NavLink>
-        </nav>
-      </div>
-
-      <div className="flex items-center gap-4 sm:gap-6 md:gap-8 lg:gap-10">
-        <div className="hidden sm:block">
-          <SearchBar
-            placeholder="O que você procura"
-            onChange={handleChange}
-            value={value}
-          />
-        </div>
-
-        <AccountLink />
-
-        <Link to="/cart">
-          <img
-            src={bag}
-            alt="Sacola de compras"
-            className="w-6 md:w-7 lg:w-8 rounded-full"
-          />
-        </Link>
-      </div>
-    </header>
-  );
-};
-
-export default Header;
+              text-[var(--text-color)] transiti

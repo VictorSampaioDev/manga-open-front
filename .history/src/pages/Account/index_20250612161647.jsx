@@ -4,7 +4,7 @@ const LoginRegister = () => {
   return (
     <>
       <div className="animated-gradient h-screen flex items-center justify-center p-4 sm:p-6 md:p-8">
-        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black opacity-80 max-w-lg w-full mx-auto p-8 md:p-12 lg:p-16">
+        <div className="flex flex-col items-center glassmorphism-border rounded-4xl bg-black bg-opacity-0 max-w-lg w-full mx-auto p-8 md:p-12 lg:p-16">
           <h1 className="text-white font-bold mb-8 text-2xl md:text-3xl lg:text-4xl">
             Entre na sua conta
           </h1>
